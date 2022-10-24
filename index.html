@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modo Dia / Noite</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <link href="./css/PhotoGallery/Icon.png" rel="icon">
+</head>
+<body class="">
+    <header id="Header">
+        <h1 id="Title">Modo Diário</h1>
+    </header>
+    <main>
+        <section class="Interface" id="Interface">
+            <h1 onclick="Clique()">Modo Clique</h1>
+            <h1 onclick="Extensivo()">Modo Extensivo</h1>
+        </section>
+        <section class="InterfaceOne" id="InterfaceOne">
+            <p onclick="Return()" class="ButtonReturn"></p>
+            <p onclick="Action()" class="IconClick"></p>
+        </section>
+        <section class="InterfaceTwo" id="InterfaceTwo">
+            <p onclick="Return()" class="ButtonReturn"></p>
+            <aside onclick="Action()" id="IconDisplay">
+                <div class="MoonLeft"></div>
+                <div class="Center"></div>
+                <div class="SunRight"></div>
+                <div class="Animation" id="Animation"></div>
+            </aside>
+        </section>
+    </main>
+    <script src="./javascript/script.js"></script>
+</body>
+</html>
