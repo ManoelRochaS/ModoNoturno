@@ -1,40 +1,139 @@
 
-
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 body{
     width: 100%;
     height: 100vh;
     font-family: Quicksand;
     transition: all 1s;
+    background-color: #ffffff;
+    color: #000000;
 }
-.Black{
-    background-color: black;
-    color: white;
+.bodyDark{
+    background-color: #000000;
+    color: #ffffff;
 }
-    #Header{
+    /*Configuração do Header da funcionalidade*/
+    header{
         width: 100%;
-        height: 30vh;
         padding: 10vh 0vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-        header h1{
-            font-size: 12vh;
-        }
+    /*Configuração dos displays de configuração*/
     main{
         width: 100%;
-        display: flex;
-        flex-flow: column wrap;
     }
         main section{
             width: 100%;
+        }
+            #displayMenu h1{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #displayMenu h1:hover{
+                background-color: #000000;
+                color: #ffffff;
+            }
+            .bodyDark #displayMenu h1:hover{
+                background-color: #ffffff;
+                color: #000000;
+            }
+        .displayAction{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+            aside{
+                background-image: url(./PhotoGallery/ButtonReturnDay.png);
+                background-size: cover;
+            }
+            .bodyDark aside{
+                background-image: url(./PhotoGallery/ButtonReturnNight.png) !important;
+            }
+            aside:hover{
+                background-image: url(./PhotoGallery/ButtonReturnNight.png);
+                background-color: black;
+            }
+            .bodyDark aside:hover{
+                background-image: url(./PhotoGallery/ButtonReturnDay.png) !important;
+                background-color: white !important;
+            }
+        .IconClick{
+            border-radius: 100%;
+            background-image: url(./PhotoGallery/SunIcon.png);
+            background-size: cover;
+        }
+        .bodyDark .IconClick{
+            background-image: url(./PhotoGallery/MoonIcon.png);
+        }
+        .IconExtensive{
+            padding: 0vh 0vh;
+            display: flex;
+            justify-content:left;
+            align-items: center;
+        }
+        .bodyDark .IconExtensive{
+            justify-content: right;
+        }
+            .IconExtensive .Animation{
+                position: relative;
+                background-image: url(./PhotoGallery/SunIcon.png);
+                background-size: cover;
+                border-radius: 100%;
+                transition: background 0.5s;
+                background-color: white;
+            }
+            .bodyDark .IconExtensive .Animation{
+                background-image: url(./PhotoGallery/MoonIcon.png);
+                background-color: black;
+            }
+            .MoonLeft{
+                position:absolute;
+                background-color: #000000;
+                border-radius: 100% 0% 0% 100%;
+            }
+            .bodyDark .MoonLeft{
+                background-color: #ffffff;
+            }
+            .Center{
+                position: absolute;
+                background-color: #000000;
+            }
+            .bodyDark .Center{
+                background-color: #ffffff;
+            }
+            .SunRight{
+                position:absolute;
+                background-color: #000000;
+                border-radius: 0% 100% 100% 0%;
+            }
+            .bodyDark .SunRight{
+                background-color: #ffffff;
+            }
+
+@media (orientation: landscape) {
+    /*Configuração do Header da funcionalidade*/
+    header{
+        height: 30vh;
+    }
+        header h1{
+            font-size: 12vh;
+        }
+    /*Configuração dos displays de configuração*/
+    main{
+        height: 50vh;
+    }
+        main section{
             height: 50vh;
         }
-        main .Interface{
+        #displayMenu{
             display: flex;
             flex-flow: row wrap;
             justify-content: space-evenly;
@@ -42,263 +141,176 @@ body{
             height: 40vh;
             padding-bottom: 10vh;
         }
-            .Interface h1{
+            #displayMenu h1{
                 width: 25%;
                 padding: 2vh;
                 font-size: 2vw;
-                text-align: center;
             }
-            .Interface h1:hover{
-                background-color: black;
-                color: white;
-            }
-            .Black .Interface h1:hover{
-                background-color: white;
-                color: black;
-            }
-        main .InterfaceOne{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
-        }
-            .ButtonReturn{
+            aside{
                 position:absolute;
                 top: 3vh;
                 left: 15vh;
                 height: 7vh;
                 width: 7vh;
                 border-radius: 7vh;
-                background-image: url(./PhotoGallery/ButtonReturnDay.png);
-                background-size: cover;
             }
-            .Black .ButtonReturn{
-                background-image: url(./PhotoGallery/ButtonReturnNight.png) !important;
-            }
-            .ButtonReturn:hover{
-                background-image: url(./PhotoGallery/ButtonReturnNight.png);
-                background-color: black;
-            }
-            .Black .ButtonReturn:hover{
-                background-image: url(./PhotoGallery/ButtonReturnDay.png) !important;
-                background-color: white !important;
-            }
-            .InterfaceOne .IconClick{
-                padding: 1.5vh;
+        .IconClick{
+            padding: 1.5vh;
+            height: 15vh;
+            width: 15vh;
+        }
+        .IconExtensive{
+            height: 20vh;
+            width: 60vh;
+        }
+            .IconExtensive .Animation{
                 height: 15vh;
                 width: 15vh;
-                border-radius: 100%;
-                background-image: url(./PhotoGallery/SunIcon.png);
-                background-size: cover;
+                padding: 1.5vh;
+                margin-left: 1.5vh;
             }
-            .Black .InterfaceOne .IconClick{
-                background-image: url(./PhotoGallery/MoonIcon.png);
+            .bodyDark .IconExtensive .Animation{
+                margin-left: 0vh;
+                margin-right: 1.5vh;
             }
-        main .InterfaceTwo{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
-        }
-            .InterfaceTwo #IconDisplay{
-                height: 20vh;
-                width: 60vh;
-                padding: 0vh 0vh;
-                display: flex;
-                justify-content:left;
-                align-items: center;
+            .MoonLeft{
+                border: 0.5vh solid black;
+                border-right: 0vh solid transparent;
+                margin-left: 0.5vh;
+                width: 19vh;
+                height: 19vh;
             }
-            .Black #IconDisplay{
-                justify-content: right;
+            .bodyDark .MoonLeft{
+                border: 0.5vh solid white;
+                border-right: 0vh solid transparent;
+                margin-right: 40vh;
             }
-                #IconDisplay .Animation{
-                    position: relative;
-                    height: 15vh;
-                    width: 15vh;
-                    padding: 1.5vh;
-                    margin-left: 1.5vh;
-                    background-image: url(./PhotoGallery/SunIcon.png);
-                    background-size: cover;
-                    border-radius: 100%;
-                    transition: background 0.5s;
-                    background-color: white;
-                }
-                .Black #IconDisplay .Animation{
-                    margin-left: 0vh;
-                    margin-right: 1.5vh;
-                    background-image: url(./PhotoGallery/MoonIcon.png);
-                    background-color: black;
-                }
-                .MoonLeft{
-                    position:absolute;
-                    border: 0.5vh solid black;
-                    border-right: 0vh solid transparent;
-                    margin-left: 0.5vh;
-                    width: 19vh;
-                    height: 19vh;
-                    background-color: black;
-                    border-radius: 100% 0% 0% 100%;
-                }
-                .Black .MoonLeft{
-                    position:absolute;
-                    border: 0.5vh solid white;
-                    border-right: 0vh solid transparent;
-                    margin-right: 40vh;
-                    background-color: white;
-                }
-                .Center{
-                    position: absolute;
-                    margin-left: 20vh;
-                    width: 20vh;
-                    height: 19vh;
-                    background-color: black;
-                    border-top: 0.5vh solid black;
-                    border-bottom: 0.5vh solid black;
-                }
-                .Black .Center{
-                    position: absolute;
-                    margin-right: 20vh;
-                    width: 20vh;
-                    height: 19vh;
-                    background-color: white;
-                    border-top: 0.5vh solid white;
-                    border-bottom: 0.5vh solid white;
-                }
-                .SunRight{
-                    position:absolute;
-                    border: 0.5vh solid black;
-                    border-left: 0vh solid transparent;
-                    margin-left: 40vh;
-                    width: 19vh;
-                    height: 19vh;
-                    background-color: black;
-                    border-radius: 0% 100% 100% 0%;
-                }
-                .Black .SunRight{
-                    position:absolute;
-                    border: 0.5vh solid white;
-                    border-left: 0vh solid transparent;
-                    margin-right: 0.5vh;
-                    width: 19vh;
-                    height: 19vh;
-                    background-color: white;
-                }
+            .Center{
+                margin-left: 20vh;
+                width: 20vh;
+                height: 19vh;
+                border-top: 0.5vh solid black;
+                border-bottom: 0.5vh solid black;
+            }
+            .bodyDark .Center{
+                margin-right: 20vh;
+                width: 20vh;
+                height: 19vh;
+                border-top: 0.5vh solid white;
+                border-bottom: 0.5vh solid white;
+            }
+            .SunRight{
+                border: 0.5vh solid black;
+                border-left: 0vh solid transparent;
+                margin-left: 40vh;
+                width: 19vh;
+                height: 19vh;
+            }
+            .bodyDark .SunRight{
+                border: 0.5vh solid white;
+                border-left: 0vh solid transparent;
+                margin-right: 0.5vh;
+                width: 19vh;
+                height: 19vh;
+            }
+}
 
-
-@media all and (orientation: portrait){
-
-    #Header{
+@media (orientation: portrait) {
+    /*Configuração do Header da funcionalidade*/
+    header{
         height: 20vh;
-        padding: 10vh 0vh;
     }
         header h1{
             font-size: 6vh;
         }
-
+    /*Configuração dos displays de configuração*/
+    main{
+        height: 60vh;
+    }
         main section{
-            width: 100%;
             height: 60vh;
         }
-        main .Interface{
+        #displayMenu{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
             height: 50vh;
             padding-bottom: 10vh;
         }
-            .Interface h1{
+            #displayMenu h1{
                 width: 50%;
                 padding: 3vh;
                 font-size: 2.5vh;
-                text-align: center;
             }
-        main .InterfaceOne{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
-        }
-            .ButtonReturn{
+            aside{
+                position:absolute;
                 top: 3vh;
                 left: 3vh;
                 height: 5vh;
                 width: 5vh;
                 border-radius: 5vh;
             }
-            .InterfaceOne .IconClick{
-                padding: 1.2vh;
-                height: 12vh;
-                width: 12vh;
-            }
-        main .InterfaceTwo{
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            display: none;
+        .IconClick{
+            padding: 1.2vh;
+            height: 12vh;
+            width: 12vh;
         }
-            .InterfaceTwo #IconDisplay{
-                height: 20vw;
-                width: 60vw;
+        .IconExtensive{
+            height: 20vw;
+            width: 60vw;
+        }
+            .IconExtensive .Animation{
+                height: 15vw;
+                width: 15vw;
+                padding: 1.5vw;
+                margin-left: 1.5vw;
             }
-                #IconDisplay .Animation{
-                    height: 15vw;
-                    width: 15vw;
-                    padding: 1.5vw;
-                    margin-left: 1.5vw;
-                }
-                .Black #IconDisplay .Animation{
-                    margin-left: 0vh;
-                    margin-right: 1.5vw;
-                }
-                .MoonLeft{
-                    position:absolute;
-                    border: 0.5vw solid black;
-                    border-right: 0vh solid transparent;
-                    margin-left: 0.5vw;
-                    width: 19vw;
-                    height: 19vw;
-                }
-                .Black .MoonLeft{
-                    position:absolute;
-                    border: 0.5vw solid white;
-                    border-right: 0vh solid transparent;
-                    margin-right: 40vw;
-                }
-                .Center{
-                    position: absolute;
-                    margin-left: 20vw;
-                    width: 20vw;
-                    height: 19vw;
-                    border-top: 0.5vw solid black;
-                    border-bottom: 0.5vw solid black;
-                }
-                .Black .Center{
-                    position: absolute;
-                    margin-right: 20vw;
-                    width: 20vw;
-                    height: 19vw;
-                    border-top: 0.5vw solid white;
-                    border-bottom: 0.5vw solid white;
-                }
-                .SunRight{
-                    position:absolute;
-                    border: 0.5vw solid black;
-                    border-left: 0vh solid transparent;
-                    margin-left: 40vw;
-                    width: 19vw;
-                    height: 19vw;
-                }
-                .Black .SunRight{
-                    position:absolute;
-                    border: 0.5vw solid white;
-                    border-left: 0vh solid transparent;
-                    margin-right: 0.5vw;
-                    width: 19vw;
-                    height: 19vw;
-                }
+            .bodyDark .IconExtensive .Animation{
+                margin-left: 0vh;
+                margin-right: 1.5vw;
+            }
+            .MoonLeft{
+                border: 0.5vw solid black;
+                border-right: 0vh solid transparent;
+                margin-left: 0.5vw;
+                width: 19vw;
+                height: 19vw;
+            }
+            .bodyDark .MoonLeft{
+                border: 0.5vw solid white;
+                border-right: 0vh solid transparent;
+                margin-right: 40vw;
+            }
+            .Center{
+                margin-left: 20vw;
+                width: 20vw;
+                height: 19vw;
+                border-top: 0.5vw solid black;
+                border-bottom: 0.5vw solid black;
+            }
+            .bodyDark .Center{
+                margin-right: 20vw;
+                width: 20vw;
+                height: 19vw;
+                border-top: 0.5vw solid white;
+                border-bottom: 0.5vw solid white;
+            }
+            .SunRight{
+                border: 0.5vw solid black;
+                border-left: 0vh solid transparent;
+                margin-left: 40vw;
+                width: 19vw;
+                height: 19vw;
+            }
+            .bodyDark .SunRight{
+                border: 0.5vw solid white;
+                border-left: 0vh solid transparent;
+                margin-right: 0.5vw;
+                width: 19vw;
+                height: 19vw;
+            }
 }
-
 
 @font-face {
     font-family: Quicksand;
