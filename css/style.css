@@ -1,4 +1,5 @@
 
+/*Configuração Geral do Documento html*/
 *{
     margin: 0;
     padding: 0;
@@ -17,7 +18,7 @@ body{
     background-color: #000000;
     color: #ffffff;
 }
-    /*Configuração do Header da funcionalidade*/
+    /*Header do Documento com Título Descrito por h1*/
     header{
         width: 100%;
         padding: 10vh 0vh;
@@ -25,7 +26,7 @@ body{
         justify-content: center;
         align-items: center;
     }
-    /*Configuração dos displays de configuração*/
+    /*Main do Documento com seções decritas por section e outros hereditários*/
     main{
         width: 100%;
     }
@@ -120,15 +121,16 @@ body{
                 background-color: #ffffff;
             }
 
+/*Configuração Horizontal do Documento html*/
 @media (orientation: landscape) {
-    /*Configuração do Header da funcionalidade*/
+    /*Header do Documento com Título Descrito por h1*/
     header{
         height: 30vh;
     }
         header h1{
             font-size: 12vh;
         }
-    /*Configuração dos displays de configuração*/
+    /*Main do Documento com seções decritas por section e outros hereditários*/
     main{
         height: 50vh;
     }
@@ -217,15 +219,16 @@ body{
             }
 }
 
+/*Configuração Vertical do Documento html*/
 @media (orientation: portrait) {
-    /*Configuração do Header da funcionalidade*/
+    /*Header do Documento com Título Descrito por h1*/
     header{
         height: 20vh;
     }
         header h1{
             font-size: 6vh;
         }
-    /*Configuração dos displays de configuração*/
+    /*Main do Documento com seções decritas por section e outros hereditários*/
     main{
         height: 60vh;
     }
@@ -314,6 +317,7 @@ body{
             }
 }
 
+/*Configuração de fonte Externa do Documento html*/
 @font-face {
     font-family: Quicksand;
     src: url(./font_text/Quicksand-Regular.otf);
